@@ -1,0 +1,17 @@
+# NIF for <%= project_name %>
+
+## To build the NIF module:
+
+- Make sure your projects `mix.exs` has the `:coral` compiler listed in the `project` function: `compilers: [:coral] ++ Mix.compilers()` If there already is a `:compilers` list, you should append `:coral` to it.
+- Your NIF will now build along with your project.
+
+## To load the NIF:
+
+```elixir
+defmodule <%= module %> do
+    use Coral, otp_app: <otp-app>, cmake: "<%= library_name %>"
+
+    # When your NIF is loaded, it will override this function.
+    def add(_a, _b), do: :erlang.nif_error(:nif_not_loaded)
+end
+```

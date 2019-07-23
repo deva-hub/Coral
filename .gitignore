@@ -1,0 +1,30 @@
+*
+
+# Metas
+!/.editorconfig
+!/.gitignore
+!/.formatter.exs
+
+# Documentations
+!/CODE_OF_CONDUCT.md
+!/CONTRIBUTING.md
+!/README.md
+!/CHANGELOG.md
+!/LICENSE
+
+# Entrypoints
+!/mix.exs
+!/mix.lock
+
+# Sources
+!/lib/
+!/lib/**/
+!/lib/**/*.ex
+
+!/test/
+!/test/**/
+!/test/**/*.exs
+
+!/priv/
+!/priv/**/
+!/priv/**/*
